@@ -906,6 +906,7 @@ main .cta-section .cta-img-container .cta-img img {
      object-position: center;
   display: block;
   margin: auto;
+  border-radius: 10px !important;
 }
 @media only screen and (max-width: 1200px) {
   main .cta-section .cta-img-container .cta-img img {
@@ -1542,6 +1543,7 @@ General Class
 /*
 Query Media
 */
+
 @-moz-document url-prefix() {
   main .banner .container .row #logo-banner-wrapper {
     height: 100vh;

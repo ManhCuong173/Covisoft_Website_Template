@@ -651,6 +651,7 @@ main {
           object-position: center;
           display: block;
           margin: auto;
+          border-radius: 10px!important;
 
           @include media-self-specify(1200px, 1, 0) {
             width: 100% !important;

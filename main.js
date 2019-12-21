@@ -225,10 +225,12 @@ $("document").ready(function () {
     centerMode: true,
     centerPadding: "20px",
     speed: 300,
-    slidesToShow: 5,
+    slidesToShow: 7,
+    dots: true,
+    focusOnSelect: true,
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 1201,
         settings: {
           centerMode: false,
           slidesToShow: 4,
@@ -272,18 +274,6 @@ $("document").ready(function () {
     ]
   });
 
-
-  $('.slick-slider').on('click', '.slick-slide', function (e) {
-    e.stopPropagation();
-    var index = $(this).index();
-    
-    // if ($('.slick-slider').slick('slickCurrentSlide') !== index) {
-    //   $('.slick-slider').slick('slickGoTo', index);
-    // }
-  });
-
-
-
   //Submit form 
   $("#submit").on('click', function (e) {
     var form = $("form")[0];
@@ -303,9 +293,9 @@ $("document").ready(function () {
   $('.cta-img').on('click', function (event) {
     event.preventDefault();
     var domElement = $(this);
-    // setTimeout(() => {
-    //   window.open(domElement.find('a').attr('href'), '_blank');
-    // }, 1000);
+    setTimeout(() => {
+      window.open(domElement.find('a').attr('href'), '_blank');
+    }, 1000);
   })
 
   //MuuriJS Actived
