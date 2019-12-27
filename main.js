@@ -107,7 +107,7 @@ $("document").ready(function () {
     }, 1500);
   })
 
-  if (navigator.userAgent.search("Firefox") > -1 && $(window).width() < 768 && $(window).width() >= 768) {
+  if (navigator.userAgent.search("Firefox") > -1) {
     serviceSectionOffsetTop -= 400;
     productSectionOffsetTop -= 400;
     technologySectionOffsetTop -= 400;
@@ -149,12 +149,8 @@ $("document").ready(function () {
         if (currentAddingHeight == 0) {
           portfolioSection.addClass('scrollDown');
           dataFilter = parentProductClass.getAttribute('data-filter');
-          if (dataFilter == '*') {
-            grid.filter('.item');
-          } else {
-            dataFilter = dataFilter.split('.')[1];
-            grid.filter(`.${dataFilter}`);
-          }
+          dataFilter = dataFilter.split('.')[1];
+          grid.filter(`.${dataFilter}`);
 
           let portfolioSectionHeight = $('.allProducts').height();
           technologySectionOffsetTop += portfolioSectionHeight;
@@ -168,12 +164,8 @@ $("document").ready(function () {
 
           portfolioSection.addClass('scrollDown');
           dataFilter = parentProductClass.getAttribute('data-filter');
-          if (dataFilter == '*') {
-            grid.filter('.item');
-          } else {
-            dataFilter = dataFilter.split('.')[1];
-            grid.filter(`.${dataFilter}`);
-          }
+          dataFilter = dataFilter.split('.')[1];
+          grid.filter(`.${dataFilter}`);
 
           let portfolioSectionHeight = $('.allProducts').height();
           technologySectionOffsetTop += portfolioSectionHeight;
@@ -309,6 +301,9 @@ $("document").ready(function () {
     // Default hide animation
     hideDuration: 300,
     hideEasing: 'ease',
+    layout: {
+      alignRight:true
+    }
   });
 
 });

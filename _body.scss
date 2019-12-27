@@ -145,7 +145,7 @@ main {
   }
 
   .our-products {
-    padding-top: 74px;
+    padding: 74px 0 100px 0;
 
     .list-products {
       flex-flow: row wrap;
@@ -362,7 +362,7 @@ main {
 
 
   .our-activities {
-    padding-top: 74px;
+    padding: 74px 0 50px 0;
 
     .list-activities {
       padding-top: 50px;
@@ -481,7 +481,7 @@ main {
                 &:hover {
                   >div:last-child {
                     display: block;
-                    transform: translate(10%, 10%);
+                    transform: translate(10%, 20px);
                   }
                 }
               }
@@ -494,7 +494,7 @@ main {
                 &:hover {
                   >div:last-child {
                     display: block;
-                    transform: translate(-80%, 10%);
+                    transform: translate(-75%, 20px);
                   }
                 }
               }
@@ -506,7 +506,7 @@ main {
               &:hover {
                 >div:last-child {
                   display: block;
-                  transform: translateY(10%) !important;
+                  transform: translateY(20px) !important;
                 }
               }
             }
@@ -518,7 +518,7 @@ main {
             &:hover {
               >div:last-child {
                 display: block;
-                transform: translate(-40%, 10%);
+                transform: translate(-40%, 20px);
 
                 @include media-self-specify(1200px, 1, 0) {
                   background: $color_background_1;
@@ -764,6 +764,7 @@ main {
 
 .portfolioItemActived {
   background: $color_bay_of_many_approx!important;
+  color: $color-highlight!important;
   transform: scale(1.1);
   transition: transform ease-out .5s;
   border-radius: 10px;

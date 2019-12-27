@@ -421,7 +421,7 @@ main .our-services .list-services .our-service:hover img {
           animation-timing-function: cubic-bezier(0.6, -0.5, 0.735, 0.045);
 }
 main .our-products {
-  padding-top: 74px;
+  padding: 74px 0 100px 0;
 }
 main .our-products .list-products {
   -webkit-box-orient: horizontal;
@@ -649,7 +649,7 @@ main .our-products .portfolio .allProducts .grid .item .item-content .info_proje
   color: #777;
 }
 main .our-activities {
-  padding-top: 74px;
+  padding: 74px 0 50px 0;
 }
 main .our-activities .list-activities {
   padding-top: 50px;
@@ -750,30 +750,30 @@ main .section-technology .row .list-technologies .col-technology:last-child .tec
 @media only screen and (min-width: 576px) and (max-width: 1200px) {
   main .section-technology .row .list-technologies .col-technology:nth-child(1) .technology:hover > div:last-child, main .section-technology .row .list-technologies .col-technology:nth-child(4) .technology:hover > div:last-child, main .section-technology .row .list-technologies .col-technology:nth-child(7) .technology:hover > div:last-child {
     display: block;
-    -webkit-transform: translate(10%, 10%);
-        -ms-transform: translate(10%, 10%);
-            transform: translate(10%, 10%);
+    -webkit-transform: translate(10%, 20px);
+        -ms-transform: translate(10%, 20px);
+            transform: translate(10%, 20px);
   }
   main .section-technology .row .list-technologies .col-technology:nth-child(3) .technology:hover > div:last-child, main .section-technology .row .list-technologies .col-technology:nth-child(6) .technology:hover > div:last-child, main .section-technology .row .list-technologies .col-technology:nth-child(9) .technology:hover > div:last-child {
     display: block;
-    -webkit-transform: translate(-80%, 10%);
-        -ms-transform: translate(-80%, 10%);
-            transform: translate(-80%, 10%);
+    -webkit-transform: translate(-75%, 20px);
+        -ms-transform: translate(-75%, 20px);
+            transform: translate(-75%, 20px);
   }
 }
 @media only screen and (max-width: 576px) {
   main .section-technology .row .list-technologies .col-technology .technology:hover > div:last-child {
     display: block;
-    -webkit-transform: translateY(10%) !important;
-        -ms-transform: translateY(10%) !important;
-            transform: translateY(10%) !important;
+    -webkit-transform: translateY(20px) !important;
+        -ms-transform: translateY(20px) !important;
+            transform: translateY(20px) !important;
   }
 }
 main .section-technology .row .list-technologies .col-technology .technology:hover > div:last-child {
   display: block;
-  -webkit-transform: translate(-40%, 10%);
-      -ms-transform: translate(-40%, 10%);
-          transform: translate(-40%, 10%);
+  -webkit-transform: translate(-40%, 20px);
+      -ms-transform: translate(-40%, 20px);
+          transform: translate(-40%, 20px);
 }
 @media only screen and (max-width: 1200px) {
   main .section-technology .row .list-technologies .col-technology .technology:hover > div:last-child {
@@ -1076,6 +1076,7 @@ main .cta-section .cta-img-container .cta-img img {
 }
 .portfolioItemActived {
   background: #20478b !important;
+  color: #FF9051 !important;
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
