@@ -9,7 +9,7 @@ footer {
   $color-text_1: #97a4ba;
 
   .fcontact {
-    background: #20478b;
+    background: #7A6C4A;
     padding-top: 117px;
     padding-bottom: 127.42px;
     overflow: hidden;
@@ -55,7 +55,7 @@ footer {
         &-list {
           margin-top: 44px;
           height: 117px;
-          color: $color-highlight_2;
+          color: #E6C975;
           font-size: 20px;
           font-weight: 500;
     
@@ -86,7 +86,7 @@ footer {
           height: 38px;
           background: none;
           border-radius: 19px;
-          border: 1px solid $color-highlight_2;
+          border: 1px solid #E6C975;
           .slider {
             z-index: 10;
             width: 85%;
@@ -133,7 +133,7 @@ footer {
               position: relative; 
               width: fit-content!important;
               height: 28px;
-              background: $color-highlight_2;
+              background: #E6C975;
               border-radius: 14px;
               z-index: 1;
               padding: 3px;
@@ -145,7 +145,7 @@ footer {
                 height: 22px;
                 top: 0;
                 left: 0;
-                background: $color_bay_of_many_approx;
+                background: #6c5e35;
                 border-radius: 16px;
                 user-select: none;
                 color: $color-white;
@@ -245,13 +245,13 @@ footer {
         height: 40px;
       }
       ::placeholder {
-        color: $color-highlight_2!important;
+        color: #E6C975!important;
       }
 
       button {
         background: none;
-        color: $color-highlight_2!important;
-        border: 1px solid $color-highlight_2;
+        color: #E6C975!important;
+        border: 1px solid #E6C975;
         outline: none;
         padding-right: 23px;
         padding-left: 23px;
@@ -273,7 +273,7 @@ footer {
         .form-control {
           background: none;
           color: $color-highlight_2!important;
-          border: 1px solid $color-highlight_2;
+          border: 1px solid #E6C975;
           outline: none;
         }
       }

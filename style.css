@@ -1092,7 +1092,7 @@ main .cta-section .cta-img-container .cta-img img {
 Footer Section
 */
 footer .fcontact {
-  background: #20478b;
+  background: #7A6C4A;
   padding-top: 117px;
   padding-bottom: 127.42px;
   overflow: hidden;
@@ -1144,7 +1144,7 @@ footer .fcontact .fcontact-form-left .fcontact-services {
 footer .fcontact .fcontact-form-left .fcontact-services-list {
   margin-top: 44px;
   height: 117px;
-  color: #84ccef;
+  color: #E6C975;
   font-size: 20px;
   font-weight: 500;
 }
@@ -1178,7 +1178,7 @@ footer .fcontact .fcontact-form-left .fcontact-notification .fcontact-notificati
   height: 38px;
   background: none;
   border-radius: 19px;
-  border: 1px solid #84ccef;
+  border: 1px solid #E6C975;
 }
 footer .fcontact .fcontact-form-left .fcontact-notification .fcontact-notification-bar .slider {
   z-index: 10;
@@ -1243,7 +1243,7 @@ footer .fcontact .fcontact-form-left .fcontact-notification .fcontact-notificati
   width: -moz-fit-content !important;
   width: fit-content !important;
   height: 28px;
-  background: #84ccef;
+  background: #E6C975;
   border-radius: 14px;
   z-index: 1;
   padding: 3px;
@@ -1257,7 +1257,7 @@ footer .fcontact .fcontact-form-left .fcontact-notification .fcontact-notificati
   height: 22px;
   top: 0;
   left: 0;
-  background: #20478b;
+  background: #6c5e35;
   border-radius: 16px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1366,24 +1366,24 @@ footer .fcontact .fcontact-form-right input {
   height: 40px;
 }
 footer .fcontact .fcontact-form-right ::-webkit-input-placeholder {
-  color: #84ccef !important;
+  color: #E6C975 !important;
 }
 footer .fcontact .fcontact-form-right ::-moz-placeholder {
-  color: #84ccef !important;
+  color: #E6C975 !important;
 }
 footer .fcontact .fcontact-form-right :-ms-input-placeholder {
-  color: #84ccef !important;
+  color: #E6C975 !important;
 }
 footer .fcontact .fcontact-form-right ::-ms-input-placeholder {
-  color: #84ccef !important;
+  color: #E6C975 !important;
 }
 footer .fcontact .fcontact-form-right ::placeholder {
-  color: #84ccef !important;
+  color: #E6C975 !important;
 }
 footer .fcontact .fcontact-form-right button {
   background: none;
-  color: #84ccef !important;
-  border: 1px solid #84ccef;
+  color: #E6C975 !important;
+  border: 1px solid #E6C975;
   outline: none;
   padding-right: 23px;
   padding-left: 23px;
@@ -1405,7 +1405,7 @@ footer .fcontact .fcontact-form-right .form-group {
 footer .fcontact .fcontact-form-right .form-group .form-control {
   background: none;
   color: #84ccef !important;
-  border: 1px solid #84ccef;
+  border: 1px solid #E6C975;
   outline: none;
 }
 footer .fcontact .fcontact-form-right .form-inline {
@@ -1544,7 +1544,6 @@ General Class
 /*
 Query Media
 */
-
 @-moz-document url-prefix() {
   main .banner .container .row #logo-banner-wrapper {
     height: 100vh;

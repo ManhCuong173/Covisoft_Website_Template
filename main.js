@@ -302,7 +302,7 @@ $("document").ready(function () {
     hideDuration: 300,
     hideEasing: 'ease',
     layout: {
-      alignRight:true
+      fillGaps: true
     }
   });
 
