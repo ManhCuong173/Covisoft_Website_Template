@@ -31,7 +31,7 @@ body {
   font-family: "Roboto", sans-serif !important;
   font-style: normal !important;
   white-space: normal;
-  font-display: swap;
+  font-display: swap !important;
 }
 
 .row {
@@ -1050,7 +1050,7 @@ footer .fcontact .fcontact-form-left .fcontact-notification .fcontact-notificati
   border-radius: 14px;
   max-width: 85%;
   height: 22px;
-  background: #84ccef !important;
+  background: #beac78 !important;
   position: absolute;
   border-radius: 14px;
   margin-left: auto;
@@ -1108,7 +1108,7 @@ footer .fcontact .fcontact-form-left .fcontact-notification .fcontact-notificati
   height: 28px;
   top: 0;
   left: -36px;
-  background: #84ccef;
+  background: #beac78;
   border-radius: 14px;
 }
 @media only screen and (max-width: 280px) {

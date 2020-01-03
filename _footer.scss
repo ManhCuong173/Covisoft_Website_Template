@@ -174,7 +174,7 @@ footer {
             border-radius: 14px;
             max-width: 85%;
             height: 22px;
-            background: $color-highlight_2!important;
+            background: #beac78!important;
             position: absolute;
             border-radius: 14px;
             margin-left: auto;
@@ -220,7 +220,7 @@ footer {
               height: 28px;
               top: 0;
               left: -36px;
-              background: $color-highlight_2;
+              background: #beac78;
               border-radius: 14px;
               @include media-self-specify(280px, 1, 0) {
                 height: 0;
