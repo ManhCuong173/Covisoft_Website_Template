@@ -276,7 +276,7 @@ $("document").ready(function () {
 
     if (!name || !email || !phonenumber || !comment) {
       e.preventDefault();
-      alertify.error("You need to completely fill in this form");
+      // alertify.error("You need to completely fill in this form");
       return;
     }
   });
