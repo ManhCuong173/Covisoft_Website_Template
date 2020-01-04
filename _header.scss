@@ -9,7 +9,7 @@ header {
   z-index:10000;
   
   nav {
-    background: #f5f5f5;
+    background: #f5f5f5ad;
     position: fixed;
 
     @include media-self-specify(992px, 1, 0) {
@@ -69,12 +69,13 @@ header {
           display: flex;
           flex-direction: row;
           justify-content: space-around;
-          background: #f5f5f5;
           text-align: center;
 
           @include media-self-specify(768px, 1, 0) {
             & {
               flex-direction: column;
+              background: #f5f5f5ad;
+              margin-top: 15px;
             }
           }
 
