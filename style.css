@@ -1075,7 +1075,7 @@ main .cta-section .cta-img-container .cta-img img {
     opacity: 0.2;
   }
 }
-.portfolioItemActived {
+.portfolioActivedItem {
   background: #20478b !important;
   color: #FF9051 !important;
   -webkit-transform: scale(1.1);
@@ -1571,3 +1571,4 @@ Query Media
     min-width: 0;
     min-height: 0;
   }
+}

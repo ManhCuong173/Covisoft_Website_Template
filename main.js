@@ -26,7 +26,7 @@ function scrollToSection(navbarCollapseItems, navbarHeight) {
 
 }
 
-function chooseImageForScaling(portfolioItems) {
+function scaleImage(portfolioItems) {
   for (let index = 0; index < portfolioItems.length; index++) {
     const element = portfolioItems[index];
     element.addEventListener('click', function () {
@@ -65,33 +65,36 @@ window.onresize = function () {
   nextParticle.start();
 };
 
-function chooseProductItem(productItem, productItems) {
+function chooseProductItem(item, productItems, portfolioActivedItem) {
 
-  removeActiveClass(productItems, 'portfolioItemActived');
-  productItem.classList.add('portfolioItemActived');
-  //Tìm tất cả tag product khác và gán màu đen
-  let parentNode = productItem.closest('.our-products').getElementsByClassName('product');
+  removeActiveClass(productItems,portfolioActivedItem);
+  item.classList.add(portfolioActivedItem);
+  // Find all product div and attach black background color
+  let parentNode = item.closest('.our-products').getElementsByClassName('product');
   for (let index = 0; index < parentNode.length; index++) {
     parentNode[index].style.color = '#1a1a1a';
   }
-  //Tập trurng thằng cần click và gán màu hight light
-  productItem.parentElement.style.color = '#FF9051';
+  //Attach highlight color to clicked item
+  item.parentElement.style.color = '#FF9051';
 }
 
 $("document").ready(function () {
-  var navbar = $('.navbar');
-  var ul = $('ul.navbar-nav');
-  var navbarHeight = navbar.outerHeight();
-  var productSection = $('.our-products');
-  let navbarItems = navbar.find('ul.navbar-nav .nav-item');
-  let navbarItemsGetByJS = document.getElementsByClassName('nav-item');
+  const navbar = $('.navbar');
+  const navbarHeight = navbar.outerHeight();
+  const productSection = $('.our-products');
+  const navbarItems = navbar.find('ul.navbar-nav .nav-item');
+  const navbarItemsGetByJS = document.getElementsByClassName('nav-item');
+
+  const portfolioActivedItem = 'portfolioActivedItem'
 
   let serviceSectionOffsetTop = $('.our-services').offset().top - navbarHeight;
   let productSectionOffsetTop = productSection.offset().top - navbarHeight;
   let technologySectionOffsetTop = $('.section-technology').offset().top - navbarHeight;
   let aboutusSectionOffsetTop = $('.our-activities').offset().top - navbarHeight;
   let contactFormOffsetTop = $('#footer').offset().top - navbarHeight; 
-  let scrollUpToTopButton = $('.scrollUpIcon');
+  let name = null, email = null , phonenumber =null , comment = null;
+
+  const scrollUpToTopButton = $('.scrollUpIcon');
 
   scrollUpToTopButton.on('click', function (evnet) {
     $('html,body').animate({
@@ -99,54 +102,39 @@ $("document").ready(function () {
     }, 1500);
   })
 
-  // if (navigator.userAgent.search("Firefox") > -1) {
-
-  //     serviceSectionOffsetTop -= 400;
-  //     productSectionOffsetTop -= 400;
-  //     technologySectionOffsetTop -= 400;
-  //     aboutusSectionOffsetTop -= 400;
-  //     contactFormOffsetTop -= 600;
-
-  // };
-
-  if ($(window).width() >= $(window).height()) {
-    serviceSectionOffsetTop -= 200;
-    productSectionOffsetTop -= 200;
-    technologySectionOffsetTop -= 200;
-    aboutusSectionOffsetTop -= 200;
-    contactFormOffsetTop -= 200;
-  }
   //Filter type of product showing
   let productEachSection = productSection.find('.product');
   let portfolioSection = $('.portfolio');
   let portfolioItems = $('.portfolio .item');
   let currentAddingHeight = 0;
 
-  chooseImageForScaling(portfolioItems);
+  scaleImage(portfolioItems);
 
   let productItems = productSection.find('.product-info');
   let productItemsGetByJS = document.getElementsByClassName('product-info');
-  let dataFilter;
+  let dataFilter = null;
+  let parentProductClass = null;
+  let portfolioSectionHeight = null ;
 
   for (let index = 0; index < productItemsGetByJS.length; index++) {
     productItemsGetByJS[index].addEventListener('click', function () {
-      if (this.classList.contains('portfolioItemActived')) {
+      if (this.classList.contains(portfolioActivedItem)) {
         portfolioSection.removeClass('scrollDown');
         technologySectionOffsetTop -= currentAddingHeight;
         aboutusSectionOffsetTop -= currentAddingHeight;
         contactFormOffsetTop -= currentAddingHeight;
         currentAddingHeight = 0;
-        this.classList.remove('portfolioItemActived')
+        this.classList.remove(portfolioActivedItem)
         this.style.color = '#1a1a1a';
       } else {
-        let parentProductClass = this.parentElement;
+         parentProductClass = this.parentElement;
         if (currentAddingHeight == 0) {
           portfolioSection.addClass('scrollDown');
           dataFilter = parentProductClass.getAttribute('data-filter');
           dataFilter = dataFilter.split('.')[1];
           grid.filter(`.${dataFilter}`);
 
-          let portfolioSectionHeight = $('.allProducts').height();
+          portfolioSectionHeight = $('.allProducts').height();
           technologySectionOffsetTop += portfolioSectionHeight;
           aboutusSectionOffsetTop += portfolioSectionHeight;
           contactFormOffsetTop += portfolioSectionHeight;
@@ -161,13 +149,13 @@ $("document").ready(function () {
           dataFilter = dataFilter.split('.')[1];
           grid.filter(`.${dataFilter}`);
 
-          let portfolioSectionHeight = $('.allProducts').height();
+          portfolioSectionHeight = $('.allProducts').height();
           technologySectionOffsetTop += portfolioSectionHeight;
           aboutusSectionOffsetTop += portfolioSectionHeight;
           contactFormOffsetTop += portfolioSectionHeight;
           currentAddingHeight = portfolioSectionHeight;
         }
-        chooseProductItem(this, productItems);
+        chooseProductItem(this, productItems, portfolioActivedItem);
       }
     }, true)
   }
@@ -262,7 +250,6 @@ $("document").ready(function () {
 
   //Submit form 
   $("#submit").on('click', function (e) {
-    var form = $("form")[0];
     name = $("#fname").val();
     email = $("#femail").val();
     phonenumber = $("#fphonenumber").val();
@@ -270,8 +257,10 @@ $("document").ready(function () {
 
     if (!name || !email || !phonenumber || !comment) {
       e.preventDefault();
-      // alertify.error("You need to completely fill in this form");
+      alertify.error("You need to completely fill in this form");
       return;
+    } else {
+      alertify.success("Successfully send information")
     }
   });
 
